@@ -1,3 +1,4 @@
+import ProductCart from "../components/ProductCart";
 import useFetch from "../hooks/useFetch";
 
 const Products = () => {
@@ -13,11 +14,7 @@ const Products = () => {
     return (
         <div style={{display:"grid", gridTemplateColumns:"repeat(4, 1fr)", gap:"20px"}}>
             {products.map(product =>(
-                <div style={{border: "2px solid gray"}}>
-                    <img style={{width: "100%"}} src={product.image} alt="" />
-                    <p>{product.title}</p>
-                    <p>{product.price}</p>
-                </div>
+                <ProductCart product={product}/>
             ))}
         </div>
     );
