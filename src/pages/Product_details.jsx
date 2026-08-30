@@ -11,6 +11,8 @@ const Product_details = () => {
         <div>
             <p>Products Details Page</p>
             <img src={singleProduct?.image} alt="" />
+            <p>{singleProduct?.title}</p>
+            <p>{singleProduct?.description}</p>
         </div>
     );
 };
