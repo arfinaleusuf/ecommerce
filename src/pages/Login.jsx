@@ -1,15 +1,20 @@
-import { useState } from "react";
-import { Link } from "react-router";
+import { useContext, useState } from "react";
+
+import { AuthContext } from "../context/AuthProvider";
 
 
 const Login = () => {
     const [userName, serUserName] =useState("");
     const [password, setPassword] = useState("");
+    const{authUser, login} =  useContext(AuthContext);
+
 
     const handleLogin = (e) => {
         e.preventDefault();
-        console.log(userName, password)
+        login(userName,password)
     }
+
+    console.log(authUser);
 
     return (
         <div className="shadow-2xl w-1/3 mx-auto text-center py-12">

@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Products from "../pages/Products";
 import Product_details from "../pages/Product_details";
 import Login from "../pages/Login";
+import ProtectedRouter from "./ProtectedRouter";
 
 
 
@@ -24,15 +25,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'products',
-                element: <Products/>
+                element: <Products />
             },
             {
                 path: 'products/:OurId',
-                element: <Product_details/>
+                element: <ProtectedRouter>
+                    <Product_details />
+                </ProtectedRouter>
             },
             {
                 path: "login",
-                element: <Login/>
+                element: <Login />
             },
         ]
     },
