@@ -46,7 +46,7 @@ const Products = () => {
                 
             </select>
         </div>
-        {/* all cart */}
+        {/* All cart */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px" }}>
                 {copyProducts.map(product => (
                     <ProductCart product={product} />
